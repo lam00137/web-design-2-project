@@ -23,30 +23,28 @@
   --dark-accent: #8CA629;
 }
 
-*{
- box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
-  font-family: brioso-pro, serif;
-  font-style: normal;
-  font-size: var(--font-size-base);
-  font-weight: 300;
-  line-height: 1.3;
   background-color: var(--light-shade);
-  color: var(--dark-shade);
   scroll-behavior: smooth;
 
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 500px;
+  font-family: brioso-pro, serif;
+  font-style: normal;
+  color: var(--dark-shade);
+  font-size: var(--font-size-base);
+  font-weight: 300;
+  line-height: 1.3;
 }
 
 a {
@@ -58,9 +56,12 @@ h1 {
   font-size: var(--font-size-xxl);
   font-family: 'mythshire', serif;
   font-weight: 400;
+  text-align: center;
+  margin: 1.5rem;
 }
 h2, h3 {
   font-weight: 500;
+  margin: 0;
 }
 h2 {
   font-size: var(--font-size-lg);
@@ -68,8 +69,144 @@ h2 {
 
 h3 {
   font-size: var(--font-size-md);
+
 }
 
 small {
   font-size: var(--font-size-sm)
 }
+
+nav {
+  display: none;
+  background-color: var(--main-col);
+}
+
+nav ul {
+  list-style-type: none;
+  font-size: var(--font-size-md);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+nav ul a {
+  color: var(--light-shade);
+  padding: 3px 5px;
+}
+
+input.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+input.nav-toggle:checked ~ nav {
+  display: block;
+}
+
+label.nav-toggle-label {
+  display: block;
+}
+
+/* Home Page Start */
+.main-feat, .feat-1, .feat-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.feat-1 {
+  flex-direction: column;
+}
+
+.card {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 60% 1fr;
+  border: 2px var(--dark-shade) solid;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  max-width: 350px;
+  max-height: 120px;
+  margin: 0 auto 1.5rem;
+}
+
+.card img {
+  max-height: 80px;
+  margin-right: 1.3rem;
+  grid-column: 1/1
+}
+
+.card div {
+  grid-column: 2/3;
+
+}
+
+.card p, .card h3 {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.card span {
+  text-align: right;
+  grid-column: 3/3;
+  margin-top: auto;
+}
+
+.big-card {
+  display: block;
+  border: 2px var(--dark-shade) solid;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+}
+
+.big-card h2 {
+  text-align: center;
+}
+.big-card img {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.big-card p {
+  margin: 0.5rem 0 0 0;
+}
+/* Home Page End */
+
+/* Recipe Page Start */
+.recipe-hero {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.recipe-hero div {
+  padding: 1rem;
+  margin: auto;
+}
+
+.recipe-hero h1, .recipe-hero p {
+  margin: 0;
+}
+.recipe-hero img {
+  display: block;
+  margin: auto;
+  max-width: 300px;
+}
+
+/* Recipe Page End */
+
+/* Catalogue Page Start */
+.banner {
+  display: block;
+  margin: auto;
+  max-width: 500px;
+}
+
+
+
+
+
+/* Catalogue Page End */
