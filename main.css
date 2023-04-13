@@ -8,13 +8,13 @@
 }
 
 :root {
-  --font-size-sm: clamp(0.83rem, 0.02vw + 0.83rem, 0.84rem);
-  --font-size-base: clamp(1rem, 0.23vw + 0.94rem, 1.13rem);
-  --font-size-md: clamp(1.2rem, 0.54vw + 1.06rem, 1.5rem);
-  --font-size-lg: clamp(1.44rem, 1.02vw + 1.19rem, 2rem);
-  --font-size-xl: clamp(1.73rem, 1.7vw + 1.3rem, 2.66rem);
-  --font-size-xxl: clamp(2.07rem, 2.69vw + 1.4rem, 3.55rem);
-  --font-size-xxxl: clamp(2.49rem, 4.08vw + 1.47rem, 4.73rem);
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 
   --light-shade: #F0E3D0;
   --light-accent: #B38FC2;
@@ -36,9 +36,8 @@ html {
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  max-width: 500px;
   font-family: brioso-pro, serif;
   font-style: normal;
   color: var(--dark-shade);
@@ -53,7 +52,7 @@ a {
 }
 
 h1 {
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-xxxl);
   font-family: 'mythshire', serif;
   font-weight: 400;
   text-align: center;
@@ -64,16 +63,24 @@ h2, h3 {
   margin: 0;
 }
 h2 {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
 }
 
 h3 {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
 
 }
 
 small {
-  font-size: var(--font-size-sm)
+  font-size: var(--font-size-sm);
+}
+
+b {
+  font-weight: 600;
+}
+
+header {
+  margin: 1.5em 0;
 }
 
 nav {
@@ -108,6 +115,15 @@ label.nav-toggle-label {
   display: block;
 }
 
+footer {
+  text-align: center;
+  margin: 1rem;
+}
+
+section {
+  margin: 0 1.5rem;
+}
+
 /* Home Page Start */
 .main-feat, .feat-1, .feat-2 {
   display: flex;
@@ -125,7 +141,7 @@ label.nav-toggle-label {
   border: 2px var(--dark-shade) solid;
   border-radius: 0.5rem;
   padding: 0.5rem;
-  max-width: 350px;
+  min-width: 350px;
   max-height: 120px;
   margin: 0 auto 1.5rem;
 }
@@ -156,7 +172,7 @@ label.nav-toggle-label {
   border: 2px var(--dark-shade) solid;
   border-radius: 0.5rem;
   padding: 1rem;
-  max-width: 300px;
+  min-width: 300px;
   height: auto;
   margin: 0 auto 1.5rem;
 }
@@ -176,10 +192,16 @@ label.nav-toggle-label {
 /* Home Page End */
 
 /* Recipe Page Start */
+
+.recipes {
+  min-width: 85vw;
+  margin: auto;
+}
+
 .recipe-hero {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  min-width: 500px;
 }
 
 .recipe-hero div {
@@ -196,17 +218,79 @@ label.nav-toggle-label {
   max-width: 300px;
 }
 
+.nutrition {
+  border: 1.5px solid var(--dark-shade);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  font-weight: 300;
+  text-align: left;
+  padding: 0.35rem 0 0 0;
+  border-top: 1px solid var(--dark-shade);
+  white-space: nowrap;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+tr:last-child {
+  border-bottom: 3px solid var(--dark-shade);
+}
+
+.table-head th, .table-head td {
+  border-top: none;
+}
+
+.calories {
+  border-top: 0;
+  padding-top: 0.5rem;
+}
+
+.blank-cell {
+  width: 1rem;
+}
+
+.thick-row {
+  border-top: 3px solid var(--dark-shade);
+}
+
+.thick-end {
+  border-bottom: 7px solid var(--dark-shade);
+}
+
+.dv {
+  margin-top: 1rem;
+  line-height: 0.95;
+}
 /* Recipe Page End */
 
 /* Catalogue Page Start */
+.full {
+  margin: 0;
+}
+
+.full p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 .banner {
   display: block;
   margin: auto;
-  max-width: 500px;
+  width: 100vw;
+  height: 30vh;
+  overflow: hidden;
+  background-image: url("img/dessert-table.png");
+  background-position: center;
+  background-size: cover;
 }
-
-
-
-
 
 /* Catalogue Page End */
