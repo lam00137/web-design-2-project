@@ -83,22 +83,52 @@ header {
   margin: 1.5em 0;
 }
 
+/* Nav Start */
+
+.mobile-logo {
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 1.6rem;
+  z-index: -2;
+}
+
+.logo {
+  width: 15rem;
+  margin: 0 auto 1rem auto;
+}
+
+.logo2 {
+  display: none;
+}
+
 nav {
   display: none;
-  background-color: var(--main-col);
 }
 
 nav ul {
   list-style-type: none;
   font-size: var(--font-size-md);
+  font-weight: 500;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  width: 85vw;
+  height: 100vh;
+  margin: -125px 0 0 -50px;
+  padding: 125px 0 50px 50px;
+  background-color: var(--main-col);
 }
 
-nav ul a {
+nav li {
+  padding: 0.5rem;
+  margin-left: 2rem;
+  font
+}
+
+nav a {
   color: var(--light-shade);
-  padding: 3px 5px;
 }
 
 input.nav-toggle {
@@ -111,9 +141,16 @@ input.nav-toggle:checked ~ nav {
   display: block;
 }
 
+input.nav-toggle:checked ~ label {
+  color: var(--light-shade);
+}
+
 label.nav-toggle-label {
   display: block;
+  margin: 1rem;
 }
+
+/* Nav End */
 
 footer {
   text-align: center;
@@ -311,3 +348,6 @@ tr:last-child {
 }
 
 /* Catalogue Page End */
+
+/* Media Queries Start */
+/* Media Queries End */
