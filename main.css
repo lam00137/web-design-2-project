@@ -63,11 +63,11 @@ h2, h3 {
   margin: 0;
 }
 h2 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
 }
 
 h3 {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
 
 }
 
@@ -120,7 +120,7 @@ footer {
   margin: 1rem;
 }
 
-section {
+main {
   margin: 0 1.5rem;
 }
 
@@ -201,12 +201,10 @@ section {
 .recipe-hero {
   display: flex;
   flex-direction: column;
-  min-width: 500px;
 }
 
 .recipe-hero div {
-  padding: 1rem;
-  margin: auto;
+  margin: 1rem 0;
 }
 
 .recipe-hero h1, .recipe-hero p {
@@ -216,6 +214,24 @@ section {
   display: block;
   margin: auto;
   max-width: 300px;
+}
+
+.ingredients ul {
+  list-style: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 1.5rem;
+}
+
+.ingredients li, .instructions li {
+  padding-bottom: 0.35rem;
+}
+
+.ingredients li::before {
+  content: "•";
+  padding-right: 0.5rem;
 }
 
 .nutrition {
@@ -270,6 +286,7 @@ tr:last-child {
   margin-top: 1rem;
   line-height: 0.95;
 }
+
 /* Recipe Page End */
 
 /* Catalogue Page Start */
