@@ -95,7 +95,7 @@ header {
   z-index: -2;
 }
 
-.logo {
+.logo, .logo2 {
   width: 15rem;
   margin: 0 auto 1rem auto;
 }
@@ -124,7 +124,6 @@ nav ul {
 nav li {
   padding: 0.5rem;
   margin-left: 2rem;
-  font
 }
 
 nav a {
@@ -327,27 +326,359 @@ tr:last-child {
 /* Recipe Page End */
 
 /* Catalogue Page Start */
-.full {
-  margin: 0;
-}
-
-.full p {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
 .banner {
   display: block;
   margin: auto;
   width: 100vw;
   height: 30vh;
   overflow: hidden;
-  background-image: url("img/dessert-table.png");
   background-position: center;
   background-size: cover;
 }
 
+#breakfast {
+  background-image: url("img/breakfast-table.png");
+}
+
+#lunch {
+  background-image: url("img/lunch-table.png");
+}
+
+#dinner {
+  background-image: url("img/dinner-table.png");
+}
+
+#dessert {
+  background-image: url("img/dessert-table.png");
+}
+
+#snacks {
+  background-image: url("img/snack-table.png");
+}
+
+#drinks {
+  background-image: url("img/drink-table.png");
+}
+.column-2 {
+  margin: 0;
+}
+
+.catalogue-desc, .catalogue-cards {
+  margin: 0 1.5rem;
+}
 /* Catalogue Page End */
 
 /* Media Queries Start */
+@media only screen and (min-width: 48em) {
+/* nav */
+  nav {
+    display: block;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    height: 4rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+    background-color: var(--light-shade);
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 1rem 0 0 0;
+    margin-left: 0;
+  }
+
+  nav li a {
+    display: block;
+    padding: 0.5rem;
+    color: var(--dark-shade);
+  }
+
+  label {
+    display: none;
+  }
+
+  label span.material-symbols-outlined {
+    display: none;
+  }
+
+  label.nav-toggle-label {
+    display: none;
+  }
+
+  input {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logo2 {
+    display: inline-block;
+    width: 7rem;
+    margin: 0;
+  }
+/* home */
+  .big-card {
+    min-width: 200px;
+  }
+
+  .big-card img {
+    max-width: 200px;
+  }
+
+  .feat {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .feat-2 article, .catalogue-cards article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feat-2 .card {
+    margin: 0.5rem 0.75rem;
+  }
+
+
+  article {
+    margin: 0 auto;
+  }
+
+  main {
+    margin: 5rem auto 0 auto;
+    max-width: 750px;
+  }
+
+  .recipes {
+    display: block;
+    min-width: 750px;
+  }
+
+  .recipe-hero {
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+
+  }
+
+  .recipe-hero img {
+    max-width: 540px;
+    margin: 0;
+  }
+
+  .recipe-hero div {
+    max-width: 550px;
+  }
+
+  .recipe-info {
+    max-width: 700px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 3rem auto;
+  }
+
+  .nutrition {
+    max-width: 300px;
+  }
+
+  .card {
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  .card img {
+    max-width: 60px;
+    margin-right: 0.75rem;
+
+  }
+
+  .banner {
+    height: 40vh;
+  }
+
+  .column-2 {
+    display: block;
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+
+  nav {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    height: 4rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+    background-color: var(--light-shade);
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 1rem 0 0 0;
+    margin-left: 0;
+  }
+
+  nav li a {
+    display: block;
+    padding: 0.5rem;
+    color: var(--dark-shade);
+  }
+
+  label {
+    display: none;
+  }
+
+  label span.material-symbols-outlined {
+    display: none;
+  }
+
+  label.nav-toggle-label {
+    display: none;
+  }
+
+  input {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logo2 {
+    display: inline-block;
+    width: 10rem;
+    margin: 0;
+  }
+
+  .big-card {
+    max-width: 350px;
+  }
+
+  .feat {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .feat-2 article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feat-2 .card {
+    margin: 0.5rem 0.75rem;
+  }
+
+  article {
+    margin: 0 auto;
+  }
+
+  main {
+    margin: 5rem auto 0 auto;
+    max-width: 1100px;
+  }
+
+  .recipes {
+    display: block;
+    min-width: 1100px;
+  }
+
+  .recipe-hero {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1100px;
+
+  }
+
+  .recipe-hero img {
+    max-width: 540px;
+    margin: 0;
+  }
+
+  .recipe-hero div {
+    max-width: 550px;
+  }
+
+  .recipe-info {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 5rem;
+    margin: 3rem auto;
+  }
+
+  .nutrition {
+    max-width: 350px;
+  }
+
+  .card {
+    min-width: 350px;
+  }
+
+  .card img {
+    max-width: 100px;
+  }
+
+  .catalogue-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1100px;
+  }
+
+  .catalogue-hero div {
+    max-width: 550px;
+  }
+
+  .banner {
+    max-width: 550px;
+  }
+
+  .column-2 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+}
+
 /* Media Queries End */
